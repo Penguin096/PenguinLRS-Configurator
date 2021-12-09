@@ -107,6 +107,7 @@ void controlEvent(ControlEvent theEvent) {
     serial = new Serial(this, Serial.list()[selectedPortNum], 4800, 'E', 8, 1.0);
     portSelected = true;
     cp5.get(ScrollableList.class, "Select COM port").close();
+    delay(3000);
     //Read_All(true);
     byte[] TXData = {(byte)0x55, (byte)0xDD, (byte)0x0A};
 
